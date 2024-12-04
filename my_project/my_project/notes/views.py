@@ -33,6 +33,7 @@ def note_detail(request, pk):
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
     elif(request.method == 'DELETE'):
+        
         note.delete() 
         return HttpResponse(status=204) 
 
